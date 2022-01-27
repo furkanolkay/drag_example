@@ -25,14 +25,13 @@ class _WardropWidgetState extends State<WardropWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final Tshirt tshirt = _clothesRepository.getUpperClothes().first as Tshirt;
+    final Tshirt tshirt = _clothesRepository.getTshirtById(0);
 
-    final Hoodie hoodie = _clothesRepository.getUpperClothes().last as Hoodie;
+    final Hoodie hoodie = _clothesRepository.getHoodieById(0);
 
-    final Jean jean = _clothesRepository.getLowerClothes().first as Jean;
+    final Jean jean = _clothesRepository.getJeanById(0);
 
-    final Trousers trousers =
-        _clothesRepository.getLowerClothes().last as Trousers;
+    final Trousers trousers = _clothesRepository.getTrousers(0);
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
